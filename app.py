@@ -12,7 +12,12 @@ movies =pd.DataFrame(movies_dict)
 vote_info=pickle.load(open("vote_info.pkl","rb"))
 vote=pd.DataFrame(vote_info)
 
-similarity = pickle.load(open("similarity.pkl","rb"))
+# @st.cache
+# def similarity():
+#     return pickle.load(open("similarity.pkl","rb"))
+
+# similarity =pickle.load(open("similarity.pkl","rb"))
+similarity =pickle.load(open("similarity.pkl","rb"))
 
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
@@ -37,7 +42,7 @@ def fetch_poster(movie_id):
 
 #Frontend
 
-st.header(" :red[MoviesWay] ")
+st.header(" :red[MoviesWay]")
 st.write("###")
 
 st.write(""" <p> Hii, welcome to <b style="color:red">Moviesway</b> this free movie recommendation engine suggests films based on your interest </p>""",unsafe_allow_html=True)
@@ -45,7 +50,8 @@ st.write("##")
 my_expander = st.expander("Tap to Select a Movie  🌐️")
 selected_movie_name = my_expander.selectbox("",movies["title"].values[:-3])
 
-
+# selected_movie_name=st.selectbox("",movies["title"].values)
+# clicked = my_expander.button(selected_movie_name)
 if my_expander.button("Recommend"):
     st.text("Here are few Recommendations..")
     st.write("#")
@@ -73,6 +79,6 @@ with tab1:
     st.caption('In upcoming versions new movies would be added :blue[:sunglasses:]')
 with tab2:
     st.caption('It Contains Movies data from The Movie Data Base (TMDB)')
-    st.caption("For more infos and ⭐ at https://github.com/vikramr22/Moviesway")
+    st.caption("For more infos and ⭐ at https://github.com/vikramr22/MovieRecommender ")
 
 
