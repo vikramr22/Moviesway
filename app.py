@@ -41,8 +41,7 @@ def fetch_poster(movie_id):
 
 
 #Frontend
-v = st.write(""" <h1> <b style="color:red"> MoviesWay</b> </h1>""",unsafe_allow_html=True)
-st.header(v)
+st.write(""" <h1> <b style="color:red"> MoviesWay</b> </h1>""",unsafe_allow_html=True)
 st.write("###")
 
 st.write(""" <p> Hii, welcome to <b style="color:red">MovieSway</b>, this free movie recommendation engine suggests films based on your interest </p>""",unsafe_allow_html=True)
