@@ -11,12 +11,7 @@ movies =pd.DataFrame(movies_dict)
 
 vote_info=pickle.load(open("vote_info.pkl","rb"))
 vote=pd.DataFrame(vote_info)
-
-@st.cache
-def similarity():
-    return pickle.load(open("similarity.pkl","rb"))
-
-similarity =similarity()
+similarity =pickle.load(open("similarity.pkl","rb"))
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
