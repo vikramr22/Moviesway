@@ -42,7 +42,7 @@ def fetch_poster(movie_id):
 
 #Frontend
 
-st.header(" :red[MoviesWay]")
+st.header(" :red[MoviesWay] ")
 st.write("###")
 
 st.write(""" <p> Hii, welcome to <b style="color:red">Moviesway</b> this free movie recommendation engine suggests films based on your interest </p>""",unsafe_allow_html=True)
