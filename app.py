@@ -44,7 +44,7 @@ def fetch_poster(movie_id):
 st.write(""" <h1> <b style="color:red"> MoviesWay</b> </h1>""",unsafe_allow_html=True)
 st.write("###")
 
-st.write(""" <p> Hii, welcome to <b style="color:red">MovieSway</b>, this free movie recommendation engine suggests films based on your interest </p>""",unsafe_allow_html=True)
+st.write(""" <p> Hii, welcome to <b style="color:red">MovieWay</b>, this free movie recommendation engine suggests films based on your interest </p>""",unsafe_allow_html=True)
 st.write("##")
 my_expander = st.expander("Tap to Select a Movie  🌐️")
 selected_movie_name = my_expander.selectbox("",movies["title"].values[:-3])
