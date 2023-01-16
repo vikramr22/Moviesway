@@ -41,7 +41,7 @@ def fetch_poster(movie_id):
 
 
 #Frontend
-
+st.header(" :red[MoviesWay]")
 st.header(" :red[MoviesWay] ")
 st.write("###")
 
@@ -50,8 +50,7 @@ st.write("##")
 my_expander = st.expander("Tap to Select a Movie  🌐️")
 selected_movie_name = my_expander.selectbox("",movies["title"].values[:-3])
 
-# selected_movie_name=st.selectbox("",movies["title"].values)
-# clicked = my_expander.button(selected_movie_name)
+
 if my_expander.button("Recommend"):
     st.text("Here are few Recommendations..")
     st.write("#")
@@ -68,8 +67,6 @@ if my_expander.button("Recommend"):
                 vote_avg, vote_count = vote[vote["id"] == id].vote_average , vote[vote["id"] == id].vote_count
                 st.write(f'<b style="color:#DB4437">Rating</b>:<b> {list(vote_avg.values)[0]}</b>',unsafe_allow_html=True)
                 st.write(f'<b style="color:#DB4437">   Votes  </b>: <b> {list(vote_count.values)[0]} <b> ',unsafe_allow_html=True)
-
-# st.sidebar.write("This is Side Bar")
 
 st.write("##")
 tab1 ,tab2 = st.tabs(["About","Working"])
