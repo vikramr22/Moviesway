@@ -75,6 +75,6 @@ with tab1:
     st.caption('In upcoming versions new movies would be added :blue[:sunglasses:]')
 with tab2:
     st.caption('It Contains Movies data from The Movie Data Base (TMDB)')
-    st.caption("For more infos and ⭐ at https://github.com/vikramr22/MovieRecommender ")
+    st.caption("For more infos and ⭐ at https://github.com/vikramr22/Moviesway ")
 
 
